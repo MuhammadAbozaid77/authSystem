@@ -3,14 +3,19 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
 export default function Layout() {
-
-  return <>
-  
-    <Header />
-    <div>
+  return (
+    <div className="flex justify-between items-between flex-col h-[100vh]">
+      <div>
+        {" "}
+        <Header />{" "}
+      </div>
+      <div className="h-[100%]">
         <Outlet />
+      </div>
+      <div>
+        {" "}
+        <Footer />{" "}
+      </div>
     </div>
-    <Footer />
-  
-  </>
+  );
 }
