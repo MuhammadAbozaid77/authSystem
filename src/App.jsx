@@ -1,4 +1,4 @@
-import { HashRouter, RouterProvider, createBrowserRouter } from "react-router-dom";
+import {RouterProvider, createBrowserRouter } from "react-router-dom";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Layout from "./pages/layouts/Layout";
@@ -105,5 +105,5 @@ export default function App() {
     { path: "/register", element: <Register /> },
   ]);
 
-  return <HashRouter router={routers}></HashRouter>;
+  return <RouterProvider router={routers}></RouterProvider>;
 }

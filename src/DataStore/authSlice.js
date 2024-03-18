@@ -10,6 +10,11 @@ const initialState = {
 const authSlice = createSlice({
   name: "authSlice",
   initialState,
+  reducers: { 
+      userLogout : ()=>{
+        localStorage.removeItem("user")
+      }
+  },
   extraReducers: (builder) => {
     /*  --------------------------------------------------------------------------------------------------------- */
     /* Function Pendening */
@@ -37,9 +42,9 @@ const authSlice = createSlice({
     });
     /* Function Rejected */
     builder.addCase(userRegister.rejected, (state, { payload }) => {
-      // console.log(payload);
     });
   },
 });
 
 export default authSlice.reducer;
+export const { userLogout } = authSlice.actions
