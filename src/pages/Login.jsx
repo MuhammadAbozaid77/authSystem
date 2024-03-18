@@ -19,7 +19,7 @@ export default function Login() {
       if (result.payload?.user) {
         localStorage.setItem("user", result.payload?.user?.uid);
         seterrorStyle("");
-        navigate("/home");
+        navigate("");
       } else {
         seterrorStyle(result.payload?.message);
       }
