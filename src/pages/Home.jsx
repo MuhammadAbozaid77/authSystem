@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { IoVideocam } from "react-icons/io5";
 import { FaPlusSquare } from "react-icons/fa";
 import { MdOutlineAccessTimeFilled } from "react-icons/md";
@@ -15,30 +15,30 @@ export default function Home() {
   return (
     <>
       <div className="flex justify-center items-center gap-10 h-[100%]">
-        <div className="cursor-pointer">
-          <div className="w-[100px] h-[100px] border p-2 rounded-[35%] flex justify-center items-center flex-col bg-orange-500">
+        <Link to={"/mettings"} className="cursor-pointer">
+          <div className="w-[120px] h-[120px] border p-2 rounded-[35%] flex justify-center items-center flex-col bg-orange-500  hover:-translate-y-3 duration-200">
             <IoVideocam size={60} color="white" />
           </div>
           <h5 className="text-center mt-2 text-gray-500 text-[20px]">
             {" "}
             New Metting{" "}
           </h5>
-        </div>
-        <div className="cursor-pointer">
-          <div className="w-[100px] h-[100px] border p-2 rounded-[35%] flex justify-center items-center flex-col bg-blue-500">
+        </Link>
+        <Link to={"/join"} className="cursor-pointer">
+          <div className="w-[120px] h-[120px] border p-2 rounded-[35%] flex justify-center items-center flex-col bg-blue-500 hover:-translate-y-3 duration-200">
             <FaPlusSquare size={60} color="white" />
           </div>
           <h5 className="text-center mt-2 text-gray-500 text-[20px]"> Join </h5>
-        </div>
-        <div className="cursor-pointer">
-          <div className="w-[100px] h-[100px] border p-2 rounded-[35%] flex justify-center items-center flex-col bg-blue-500">
+        </Link>
+        <Link to={"/schedule"} className="cursor-pointer">
+          <div className="w-[120px] h-[120px] border p-2 rounded-[35%] flex justify-center items-center flex-col bg-blue-500 hover:-translate-y-3 duration-200">
             <MdOutlineAccessTimeFilled size={60} color="white" />
           </div>
           <h5 className="text-center mt-2 text-gray-500 text-[20px]">
             {" "}
             Schedule{" "}
           </h5>
-        </div>
+        </Link>
       </div>
     </>
   );
