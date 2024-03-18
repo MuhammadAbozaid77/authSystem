@@ -4,7 +4,7 @@ export default function Footer() {
   
   
   <div>
-    gffg
+    Footer this
     
   </div>
   </>
